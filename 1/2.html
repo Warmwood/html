@@ -1,0 +1,261 @@
+<!DOCTYPE-html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <!--<script type="text/javascript" src="jquery.min.js"></script>-->
+    <style type="text/css">
+    html {
+        background-color: gray;
+        height: 100%;
+    }
+    
+    body {
+        width: 1000px;
+        background-color: white;
+        min-height: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+        position:relative;
+    }
+ 
+    ul.menu {
+    	background-color: #eee;
+      width:40%; border: solid  gray;
+        list-style: none;padding: 0;
+      border-width: 0px 0px 1px 0px;
+        box-sizing: border-box;
+    }
+       #picture { width:60%;box-sizing: border-box;}
+    ul.menu,
+    #picture {
+        float: left;
+  
+    }
+    
+    ul.menu>li {
+        float: left;
+       /*padding-right: 50px;з*/
+       
+       
+    }
+    
+    ul.menu>li>a {
+    	display: block;
+    	padding: 0 20px;
+    	height: 30px;
+        line-height: 30px;
+        text-decoration: none;
+        color: #0054a6;
+    }
+    
+    ul.menu>li>a:hover {
+        color: #6db3f8;
+        background-color: #abc;
+    }
+    
+    ul.menu:after,
+    #shapka:after,
+    #cover:after,
+    #name:after,
+    #first:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+     ul.submenu {
+        position: absolute;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        background-color: #e5e7e8;
+       min-width:110px;
+    }
+    
+      ul.submenu>li:hover {
+        background: white;
+    }
+    ul.submenu>li>a{color:#2361ee;}
+    ul.submenu>li>a:hover {
+        color: gray;
+    }
+    
+    ul.menu>li:hover>ul.submenu {
+        display: block;
+        box-sizing: border-box;
+    }
+    #name,
+    #name2 {
+        float: left;
+        color: gray;
+    }
+    
+    #name>p {
+        padding-right: 20px;
+        color: gray;
+    }
+    
+    #footer {
+        bottom: 0;
+        background-color: #acacac;
+        text-align: center;
+        position: absolute;
+        width: 1000px;
+        box-sizing: border-box;height:50px;
+    }
+    
+    #shapka {
+        padding-bottom: 50px;
+        padding-top: 30px;
+        width:800px;
+    }
+    
+    #newyork {
+        background-image: url(new_york.jpg);
+        background-repeat: no-repeat;
+        height: 300px;
+        padding-bottom: 100px;
+        color: white;
+        font-size: 26pt;
+        text-align: center;
+    }
+    
+    #newyork>p {
+        line-height: 150px;
+    }
+    
+    #forma {
+        border: 1px solid gray;
+        width: 300px;
+    }
+    
+    #forma p {
+        color: gray;
+    }
+    
+    #textt,
+    #forma {
+        padding-right: 10px;
+        padding-left: 10px;
+        float: left;
+        box-sizing: border-box;
+    }
+    
+    #forma>p {
+        margin-top: 0;
+        color: gray;
+        padding-top:10px;
+    }
+    #cover{padding-bottom:50px;}
+    #textt {
+        width: 700px;
+        color: gray;
+    }
+    </style>
+
+    <body>
+        <div id="shapka">
+            <div id="picture"><img width="200" src="logo.jpg"></div>
+            <div>
+                <ul class="menu">
+                    <li>
+                        <a href=#>Home</a>
+                        <ul class="submenu">
+	                        <li><a href=#>"124"</a>
+	                        </li>
+	                        <li><a href=#>"567"</a>
+	                        </li>
+	                        <li><a href=#>"908"</a>
+	                        </li>
+                    	</ul>
+                    </li>
+                    <li><a href=#>CPQ </a> 
+	                    <ul class="submenu">
+	                        <li><a href=#>"124"</a>
+	                        </li>
+	                        <li><a href=#>"567"</a>
+	                        </li>
+	                        <li><a href=#>"908"</a>
+	                        </li>
+
+	                    </ul>
+                    </li>
+                    <li><a href=#>The Team</a>
+	                    <ul class="submenu">
+	                        <li><a href=#>"124"</a>
+	                        </li>
+	                        <li><a href=#>"567"</a>
+	                        </li>
+	                        <li><a href=#>"908"</a>
+	                        </li>
+	                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="newyork">
+            <p>
+                Sell More. Sell Smarter.
+                <br> Watch Our Configure Price & Quote Software In Action</p>
+        </div>
+        <div id="cover">
+            <div id="textt" align="justify">
+                <b>Software That Will Make You An Industry Leader<br><br>
+
+				Who We Are<br></b>
+                <p>We are a technology innovators and business go-getters. We go above and beyond to make sure your technology solution is not just great, but exceptional.
+                    <br>
+                    <br>
+                    <b>What We Do<br></b> We help companies streamline various platforms of their IT, marketing and sales into one unified, seamless, fast and flexible solution that is entirely cloud-based and ahead of technology out in the marketplace.
+                    <br>
+                    <br>
+                    <b>How We Do It<br></b> We combine our passion for technoloy and the expertise we have gained through decades in the product configuration business to make you a success.
+            </div>
+            <div id="forma" align="center">
+                <p align="center"><b>Schedule A Demo</b></p>
+                <div id="first">
+                    <div id="name">
+                        <p>First name</p>
+                        <br>
+                        <input type="text" size="15">
+                    </div>
+                    <div id="name2">
+                        <p>Last name </p>
+                        <br>
+                        <input type="text" size="15">
+                    </div>
+                </div>
+                <div>
+                    <p>Email*</p>
+                    <input type="text" size="30">
+                </div>
+                <div>
+                    <p>
+                        Which of Our Products Are You Interested In?</p>
+                    <select size="3" name="products">
+                        <option disabled>please</option>
+                        <option value="t1" selected>EOSCPQ</option>
+                        <option value="t2">SOLECPQ</option>
+                    </select>
+                    <p>
+                        <input type="button" name="sub" onclick="alert('123')" value="submit">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>© 2016 Verenia</p>
+        </div>
+        <script>
+            function chose() {
+                alert("Thanks for your chose");
+            }
+            
+        </script>
+    </body>
+</head>
+
+</html>

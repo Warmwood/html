@@ -1,0 +1,192 @@
+<!DOCTYPE-html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <style type="text/css">
+    html {
+        height: 100%;
+    }
+    
+    body {
+        position: relative;
+        margin: 0 auto;
+        width: 800px;
+        min-height: 100%;
+    }
+    
+    ul.menu {
+        list-style-type: none;
+        display: block;
+        width: 800px;
+
+    }
+    
+    ul.podmenu>li {
+        border: 1px solid transparent;
+        padding-right:10px;
+
+    }
+    
+    ul.podmenu {
+        position: absolute;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        background-color: #fba;
+       min-width:110px;
+    }
+    
+    a {
+        padding-left: 10px;
+    }
+    
+    ul.menu>li:hover>ul.podmenu {
+        display: block;
+        box-sizing: border-box;
+    }
+    
+    ul.menu>li {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+      
+        padding-right: 40px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+    }
+    
+    ul.menu>li:first-child:hover {
+        background: #faf5b8;
+    }
+    
+    ul.menu>li:nth-child(2):hover {
+        background: #faf5b8;
+    }
+    
+    ul.menu>li:nth-child(3):hover {
+        background: #faf5b8;
+    }
+    
+    ul.menu:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    ul.podmenu>li:hover {
+        background: white;
+    }
+    
+    ul.podmenu>li>a:hover {
+        color: gray;
+    }
+    
+    #cover {
+        width: 900px;
+        box-sizing: border-box;
+    }
+    
+    #cover::after,
+    ul.menu::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    #poema {
+        box-sizing: border-box;
+        float: left;
+        width: 680px;
+    }
+    
+    #picture {
+        box-sizing: border-box;
+        float: left;
+        width: 120px;
+        margin: 10px;
+    }
+    
+    img {
+        width: 120px;
+    }
+    
+    #footer {
+        position: absolute;
+        width: 100%;
+        background-color: #faa;
+        bottom: 0;
+    }
+    </style>
+
+    <body>
+        <div>
+            <h3 style="background-color: #faa">A love poem</h3></div>
+        <div>
+            <ul class="menu">
+                <li>
+                    <a href=#>"poems"</a>
+                    <ul class="podmenu">
+                        <li><a href=#>"poem1 123456"</a>
+                        </li>
+                        <li><a href=#>"poem1"</a>
+                        </li>
+                        <li><a href=#>"poem1"</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=#>"author"</a>
+                    <ul class="podmenu">
+                        <li><a href=#>"author1"</a>
+                        </li>
+                        <li><a href=#>"author2"</a>
+                        </li>
+                        <li><a href=#>"author3"</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href=#>"contact"</a>
+                    <ul class="podmenu">
+                        <li><a href=#>"contact"</a>
+                        </li>
+                        <li><a href=#>"contact2"</a>
+                        </li>
+                        <li><a href=#>"contact3"</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="cover">
+            <div id="picture">
+                <img src="tetya.jpg"></div>
+            <div id="poema">
+                <p>A love poem will not always be long and flowery. Sometimes what you need to say can be very short. In fact it may be the fact that the poem is short that makes it special. Its short length may show that you put the time and effort in to make every word count. You considered carefully every word choice. Every word choice has a reason behind it. A short poem can be the ultimate act of romance when it is given the time and effort that it deserves.
+                </p>
+            </div>
+        </div>
+        <div id="poema2">
+            Poor old lady, she swallowed a fly.
+            <br> I don’t know why she swallowed a fly.
+            <br> Poor old lady, I think she’ll die.
+            <br> Poor old lady, she swallowed a spider.
+            <br> It squirmed and wriggled and turned inside her.
+            <br> She swallowed the spider to catch the fly.
+            <br> I don’t know why she swallowed a fly.
+            <br> Poor old lady, I think she’ll die.
+            <br> Poor old lady, she swallowed a bird.
+            <br> How absurd! She swallowed a bird.
+            <br> She swallowed the bird to catch the spider,
+            <br> She swallowed the spider to catch the fly,
+            <br> I don’t know why she swallowed a fly.
+            <br> Poor old lady, I think she’ll die.</div>
+        <div id="footer">
+            <p>footer</p>
+        </div>
+    </body>
+
+</html>
