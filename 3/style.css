@@ -115,6 +115,8 @@ p{
 				margin: 10px;
 				list-style: square outside;
 				border-radius: 10px;
+				position: relative;
+				display: block;
 
 			}
 			#menuvert>ul>li{
@@ -122,7 +124,29 @@ p{
 				padding:5px;
 				margin-left:15px;
 			}
+			#menuvert>ul>li:hover #menuvert>ul>li>ul.submenu{
+				display: block;
+			}
 			#menuvert>ul>span{padding:10px;}
+				ul.submenu{
+					position: absolute;
+					display:none;
+					color:white;		
+					background-color: ##005580;
+					width: 200px;
+				}
+				ul.submenu2{
+					position: absolute;
+					display:none;
+					color:white;		
+					background-color: ##005580;
+					width: 200px;
+				}
+				ul.submenu>li{
+					list-style: none;
+				}
+
+
 			#centrecont{
 				width:50%;
 			
@@ -144,9 +168,11 @@ p{
 			}
 			#rightcont>div{
 			border-radius: 10px;
-			border: 1px solid black;
+			border: 0.5px solid #e2e2de;
+			box-shadow: 0 0px 3px rgba(0,0,0,0.5);
 			margin: 15px;
 			padding: 10px;
+			background-image: linear-gradient(to top, #fbf9e5, #fdfdf8); 
 			}
 			#contentbtm{
 				height: 200px;
