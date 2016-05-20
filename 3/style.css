@@ -19,7 +19,7 @@ p{
 			height: 120px;
 			background-color: white;
 		}
-		#header>div:nth-child(3)::after, ul::after,#middle::after,#footer::after, #contentbtm::after{
+		#header>div:nth-child(3)::after, ul::after,#middle::after,#footer::after,  #contentbtm>div::after,#contentbtm::after{
 			display:block;
 			clear:both;
 			content:"";
@@ -162,6 +162,18 @@ p{
 				}
 				#start>div,#design>div,#support>div{
 					float:left;
+					width: 50%;
+					box-sizing:border-box;
+				}
+				#start>div:nth-child(1),#design>div:nth-child(1),#support>div:nth-child(1){
+					float:left;
+					width: 30%;
+					box-sizing:border-box;
+				}
+				#start>div:nth-child(2),#design>div:nth-child(2),#support>div:nth-child(2){
+					float:left;
+					width: 70%;
+					box-sizing:border-box;
 				}
 		#footer{
 				position: absolute;
