@@ -88,7 +88,17 @@
 		</ul>
 	</div>
 	<div id="banner">
-		<div></div>
+		
+		<div id="bannerbg">
+			
+		</div>
+		<div id="bannertext">
+		
+			<span>RokBox Video</span>
+
+
+<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
+		</div>
 	</div>
 	
 	
@@ -128,6 +138,13 @@
 		<div id="btncoll"><span>Show more item </span></div>
 	</div>
 	<div id="teambanner">
+		<div id="teambg">
+			
+		</div>
+		<div id="face1">
+			<img src="img/face1.jpg"><br>
+			<span>Quam diu etiam furor iste tuus nos eludet Unam incolunt Belgae, aliam Aquitani, tertiam. — Melly Larson</span>
+		</div>
 	</div>
 	<div id="contact">
 	 	<div>
@@ -158,6 +175,7 @@
 <div  id="footer">
 	
 	<div id="footline">
+		<div></div>
 		<p>This site is built with Love</p>
 		<p>	Copyright © 2015 Tenth</p>
 		<p>	Powered by Warp Theme Framework </p>
@@ -166,10 +184,10 @@
 
 <script type="text/javascript">
 	var y;
-	scrolling();
+	$('body').on('scroll',scrolling);
 	function scrolling(){
 	 y=$(window).scrollTop();
-	 if(y==40){ alert(y);}
+	 if(y==40){ $('#menufix').css({display:"block"});}
 	}
 </script>
 </body>

@@ -99,21 +99,31 @@ a{color:white;}
 #content{
 	width: 100%;
 	min-height: 1600px;
-	padding-bottom: 150px;
+	padding-bottom: 100px;
 }	
-#banner{position: relative;left:0;right: 0;height: 300px;}
-	#banner>div{
-		position: absolute;
-		width: 100%;}
-	#banner>div:first-child{
-		background-image: url(img/tree.jpg);
-	}
+#banner{
+	position: relative;
+	width: 100%;
+	height: 600px;
+	color:white;
+	text-align: center;
+}
+	
+	#banner	#bannerbg{
+			position:absolute;
+			display: block;
+			background-image: url(img/slide3.jpg);
+			left:-2000px;
+			right: -2000px;
+			height: 600px;
+			z-index:-1;
+
+		}
+	
 	#logo{
 		padding-top:10px;
 	}
-	#banner>div:nth-child(2){
-		background-image: url(img/kedr.jpg);
-	}	
+	
 #template>div{
 	width: 100%;
 	height: 350px;}
@@ -225,14 +235,52 @@ a{color:white;}
 	 		}
 	 		#contact button>p{padding:0 10px;height: 30px;
 	 			line-height: 30px;}
-	 		#contact input{height: 35px;margin:0 120px;}
+	 		#contact input{height: 35px;margin:0 120px;
+	 		}
+	 	#teambanner{
+	 		position: relative;
+	 		width: 100%;
+	 		height: 500px;
+	 		text-align: center;
+	 		color:white!important;
+	 	}	
+	 	#teambanner>div{margin:0 auto;}
+	 	#teambanner #teambg{
+	 		top:0;bottom: 0;
+	 		position: absolute;
+	 		left:-2000px;
+	 		right: -2000px;
+	 		background-image: url(img/tree.jpg);
+	 		z-index:-100;
+	 	}
+	 	#teambanner #face{
+			z-index:1000;
+			
+	 	}
+	 	#face>img{
+	 		margin: 15px;
+	 	}
 #footer{
 	display: block;
 	position: absolute;
 	height: 120px;
 	bottom: 0;
-	background-color:#444444;
 	color:white;
 	width: 100%;
 	text-align: center;
+}
+#footer #footline{
+position:relative;
+width: 100%;
+height: 120px;
+background-color:#444444;
+}
+#footer #footeline>div{position:absolute;
+left:-2000px;
+right: -2000px;
+bottom: 0;
+height: 120px;
+top: 0;
+z-index:-100;
+background-color: #444444;
 }
