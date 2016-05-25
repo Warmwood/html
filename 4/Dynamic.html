@@ -4,6 +4,7 @@
 
 <link rel="stylesheet" type="text/css" href="D:\DEVTOOLS\Bootstrap\3\css\bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="dynamic.css">
+<script type="text/javascript"src="file:\\d:\DEVTOOLS\jQuery\jquery.min.js"></script>
 	<title></title>
 </head>
 <body>
@@ -13,7 +14,7 @@
 		<p>Monday,13</p>
 		<div>
 			<p>headlines:<a href="#">built your site using our technology</a></p>
-			<label><input type="text">search</label>
+			<label><input type="text"placeholder= "search"></label>
 		</div>
 	</div>
 	<div id="menu">
@@ -51,7 +52,43 @@
 			<li><p>Login</p></li>
 		</ul>
 	</div>
+	<div id="menufix">
+		<div id="logo">
+			<img src="img/logo.png">
+
+		</div>
+
+		<ul>
+			<li><p>Home</p></li>
+			<li><p>Joomla</p>
+				<ul class="submenu">
+					<li><p>Home</p></li>
+					<li><p>Joomla</p></li>
+					<li><p>Features</p></li>
+					<li><p>Blog</p></li>
+					<li><p>Forum</p></li>
+					<li><p>Login</p></li>
+				</ul>
+			</li>
+			<li><p>Features</p>
+				<ul class="submenu">
+					<li><p>Home</p></li>
+					<li><p>Joomla</p></li>
+					<li><p>Features</p></li>
+					<li><p>Blog</p></li>
+					<li><p>Forum</p></li>
+					<li><p>Login</p></li>
+				</ul>
+
+
+			</li>
+			<li><p>Blog</p></li>
+			<li><p>Forum</p></li>
+			<li><p>Login</p></li>
+		</ul>
+	</div>
 	<div id="banner">
+		<div></div>
 	</div>
 	
 	
@@ -72,10 +109,22 @@
 			</div>
 			<div><img src="img/pic1.png">
 			</div>
+
 		</div>
+		<div id="btn"><span>Reed more  <b>></b>  </span></div>
 	</div>
 	<div id="portfolio">
+		
 		<span>Our portfolio</span>
+		<div>
+			<ul>
+				<li><p>ALL</p></li>
+				<li><p>NATURE</p></li>
+				<li><p>TECHNOLOGY</p></li>
+				<li><p>WOOMAN</p></li>
+			</ul>
+		</div>
+		<div></div>	
 	</div>
 	<div id="team">
 	</div>
@@ -90,5 +139,14 @@
 		<p>	Powered by Warp Theme Framework </p>
 	</div>
 </div>
+
+<script type="text/javascript">
+	var y;
+	scrolling();
+	function scrolling(){
+	 y=$(window).scrollTop();
+	 if(y==40){ alert(y);}
+	}
+</script>
 </body>
 </html>

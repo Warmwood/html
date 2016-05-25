@@ -24,31 +24,41 @@ a{color:white;}
 		content:"";
 		display:block;
 	}
-	#grayline>div{width:60%;box-sizing:border-box;}
-	#grayline>label, #grayline>p{
-		float:left;
+	#grayline>div{width:60%;float: right;}
+	#grayline>div>input{width: 15%;float: right; }
+	#grayline>div>p{width: 45%;
+		float:left; }
+	#grayline>div>label, #grayline>div>p{
+		
 		display: block;
-		width: 30%;
+		
 		box-sizing:border-box;}
-	#grayline>p:first-child, {
-		float:right;
+	#grayline>p:first-child {
+		float:left;
 		display: block;
 		width: 40%;
 		box-sizing:border-box;
+
 	}
+
 	#logo{
 		width: 50%;
 		margin:0;
 		float:left;
 	}
-#menu{
+	#menufix{
 	background-color: white;
 	height: 65px;
 	width: 1400px;
 	margin-bottom:40px;
 	border-bottom: 1px solid gray;
 	position: fixed;
+	display:none;
 	top:0;
+}
+#menu{
+	height: 65px;
+	border-bottom: 1px solid gray;
 }
 	#menu>ul{cursor: pointer;
 		float:right;
@@ -84,7 +94,20 @@ a{color:white;}
 	width: 100%;
 	height: 1400px;
 	padding-bottom: 150px;
-}		
+}	
+#banner{position: relative;left:0;right: 0;height: 300px;}
+	#banner>div{
+		position: absolute;
+		width: 100%;}
+	#banner>div:first-child{
+		background-image: url(img/tree.jpg);
+	}
+	#logo{
+		padding-top:10px;
+	}
+	#banner>div:nth-child(2){
+		background-image: url(img/kedr.jpg);
+	}	
 #template>div{
 	width: 100%;
 	height: 350px;}
@@ -93,14 +116,57 @@ a{color:white;}
 	clear:both;
 	content:"";
 }
-#template>div:first-child{text-align: center;
+	#template>div:first-child{text-align: center;
+	}
+	#template>div>div{
+		width: 50%;
+		display:block;
+		float:left;
+	}
+	#template #btn{color:white;
+		background-color: #443d40;
+		border-radius: 20px;
+		width: 140px;
+		height: 60px;
+		text-align: center;
+		}
+	 	#btn>span{height:60px ;
+	 		line-height:60px ;
+	 		font-size: 18px;}	
+#portfolio{
+	text-align: center;
 }
-#template>div>div{
-	width: 50%;
-	display:block;
-	float:left;
+	#portfolio>div{
+	text-align: center;
+	width: 600px;
 }
-#portfolio{text-align: center;}
+	#portfolio>div>ul{
+		margin:0;
+		display:block;
+		}
+	#portfolio>div>ul::after{
+		content:"";
+		clear: both;
+		display:block;
+
+	}
+	#portfolio>div>ul>li{
+		display:block;
+		border:1px  solid gray;
+		border-radius: 16px;
+		color:gray;
+		background-color: white;
+		float:left;
+		height: 60px;
+		list-style: none;
+	}
+		#portfolio>div>ul>li>p{
+			height: 60px;
+			line-height: 60px;
+			padding:0 10px;
+			font-size: 16px;
+		}
+		
 #footer{
 	display: block;
 	position: absolute;
