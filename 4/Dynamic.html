@@ -142,7 +142,7 @@
 			
 		</div>
 		<div id="face1">
-			<img src="img/face1.jpg"><br>
+			<div><img src="img/face1.jpg"><br><div>
 			<span>Quam diu etiam furor iste tuus nos eludet Unam incolunt Belgae, aliam Aquitani, tertiam. — Melly Larson</span>
 		</div>
 	</div>
@@ -176,7 +176,7 @@
 	
 	<div id="footline">
 		<div></div>
-		<p>This site is built with Love</p>
+		<p>This site is built with Love<img width="15px" src="img/love.png"></p>
 		<p>	Copyright © 2015 Tenth</p>
 		<p>	Powered by Warp Theme Framework </p>
 	</div>
@@ -186,7 +186,8 @@
 	var y;
 	$('body').on('scroll',scrolling);
 	function scrolling(){
-	 y=$(window).scrollTop();
+	 y=$('body').scrollTop();
+	 alert(y);
 	 if(y==40){ $('#menufix').css({display:"block"});}
 	}
 </script>
