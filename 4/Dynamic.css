@@ -3,7 +3,7 @@ body{
 	min-height: 100%;
 	position: relative;
 	margin:0 auto;
-	width: 1400px;
+	width: 1500px;
 	color:gray;
 }
 p{
@@ -24,8 +24,14 @@ a{color:white;}
 		content:"";
 		display:block;
 	}
-	#grayline>div{width:60%;float: right;}
-	#grayline>div>input{width: 15%;float: right; }
+	#grayline>div{
+		width:60%;
+		float: right;}
+	#grayline>div>input{
+		width: 15%;
+		float: right; 
+		background-color: gray;
+		border:none;}
 	#grayline>div>p{width: 45%;
 		float:left; }
 	#grayline>div>label, #grayline>div>p{
@@ -92,7 +98,7 @@ a{color:white;}
 
 #content{
 	width: 100%;
-	min-height: 1800px;
+	min-height: 1600px;
 	padding-bottom: 150px;
 }	
 #banner{position: relative;left:0;right: 0;height: 300px;}
@@ -124,6 +130,7 @@ a{color:white;}
 		display:block;
 		float:left;
 	}
+	#template>div>div>img{padding-right:0;float:right;}
 	#template #btn{color:white;
 		background-color: #443d40;
 		border-radius: 20px;
@@ -159,12 +166,12 @@ a{color:white;}
 		color:gray;
 		background-color: #f5f5f5;
 		float:left;
-		height: 60px;
+		height: 46px;
 		list-style: none;
 	}
 		#portfolio>div>ul>li>p{
-			height: 60px;
-			line-height: 60px;
+			height: 46px;
+			line-height: 46px;
 			padding:0 10px;
 			font-size: 16px;
 		}
@@ -181,18 +188,44 @@ a{color:white;}
 	 		line-height:60px ;
 	 		font-size: 18px;
 	 	}
-	 	#collect{height: 400px;
+	 	#portfolio  #collect{height: 400px;
 	 		width: 100%;}
 	 	#teambanner{
 	 		height: 400px;
 	 	}
 	 	#contact{
-
+	 		color:white;
 	 		height: 400px;
 	 		width: 100%;
 	 		background-color: gray;
 	 		margin:0;
 	 	}
+	 	#contact::after{
+	 		display:block;
+	 		content:"";
+	 		clear:both;
+	 	}
+	 		#contact>div{
+	 			float:left;
+	 			width: 500px;
+	 			box-sizing:border-box;
+	 			text-align: center;
+	 			padding: 10px;
+	 		}
+	 		#contact>div>span{height:65px;}
+	 		#contact>div>p{padding:5px 0;}
+	 		#contact button{
+	 			margin-top:10px;
+	 			background-color: #444444;
+	 			color:#dfdedf;
+	 			border:0;
+	 			border-radius:15px;
+	 			height: 30px;
+	 			
+	 		}
+	 		#contact button>p{padding:0 10px;height: 30px;
+	 			line-height: 30px;}
+	 		#contact input{height: 35px;margin:0 120px;}
 #footer{
 	display: block;
 	position: absolute;
