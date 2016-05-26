@@ -9,7 +9,7 @@ body{
 	width: 1000px;
 	background-color: #f5f4f4;
 }
-p{font-weight: normal!important;}
+p{}
 #header{
 	height: 160px;
 	position: relative;}

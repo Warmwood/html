@@ -1,4 +1,5 @@
-html{height: 100%;}
+html{height: 100%;
+}
 body{
 	min-height: 100%;
 	position: relative;
@@ -101,7 +102,7 @@ a{color:white;}
 
 #content{
 	width: 100%;
-	min-height: 1250px;
+	height: 1450px;
 	padding-bottom: 100px;
 }	
 #banner{
@@ -203,8 +204,30 @@ a{color:white;}
 	 	}
 	 	#portfolio  #collect{height: 400px;
 	 		width: 100%;}
-	 	#teambanner{
-	 		height: 400px;
+	 	
+	 		#teambanner{
+	 		position: relative;
+	 		width: 100%;
+	 		height: 500px;
+	 		text-align: center;
+	 		color:white!important;
+
+	 	}	
+	 	#teambanner>div{margin:0 auto;}
+	 	#teambanner #teambg{
+	 		top:0;bottom: 0;
+	 		position: absolute;
+	 		left:-2000px;
+	 		right: -2000px;
+	 		background-image: url(img/tree.jpg);
+	 		z-index:-100;
+	 	}
+	 	#teambanner #face{
+			z-index:1000;
+			
+	 	}
+	 	#face>img{
+	 		margin: 15px;
 	 	}
 	 	#contact{
 	 		color:white;
@@ -240,29 +263,7 @@ a{color:white;}
 	 			line-height: 30px;}
 	 		#contact input{height: 35px;margin:0 120px;
 	 		}
-	 	#teambanner{
-	 		position: relative;
-	 		width: 100%;
-	 		height: 500px;
-	 		text-align: center;
-	 		color:white!important;
-	 	}	
-	 	#teambanner>div{margin:0 auto;}
-	 	#teambanner #teambg{
-	 		top:0;bottom: 0;
-	 		position: absolute;
-	 		left:-2000px;
-	 		right: -2000px;
-	 		background-image: url(img/tree.jpg);
-	 		z-index:-100;
-	 	}
-	 	#teambanner #face{
-			z-index:1000;
-			
-	 	}
-	 	#face>img{
-	 		margin: 15px;
-	 	}
+	 
 #footer{
 	display: block;
 	position: absolute;
