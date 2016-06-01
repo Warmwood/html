@@ -13,7 +13,8 @@ p{
 	font-size: 16px;
 }
 span{
-	font-size: 24px
+	font-size: 24px;
+	padding: 10px;
 }
 a{color:white;}
 #grayline{background-color: gray;
@@ -22,7 +23,7 @@ a{color:white;}
 	height: 45px;
 				}
 
-	#grayline::after,#grayline>div::after, #menu>ul::after,#menu::after{
+	#grayline::after,#grayline>div::after, #menu>ul::after,#dynampart::after,#menu::after{
 		clear:both;
 		content:"";
 		display:block;
@@ -55,55 +56,64 @@ a{color:white;}
 		margin:0;
 		float:left;
 	}
+
 	#menufix{
 	background-color: white;
 	height: 65px;
-	width: 1400px;
+	width: 1500px;
 	margin-bottom:40px;
 	border-bottom: 1px solid gray;
 	position: fixed;
 	display:none;
 	top:0;
+	z-index:100;
 }
 #menu{
 	height: 65px;
 	border-bottom: 1px solid gray;
 }
-	#menu>ul{cursor: pointer;
+	#menu>ul, #menufix>ul{cursor: pointer;
 		float:right;
+		margin:0;
 
 	}
-	#menu>ul>li{list-style: none;
+	#menu>ul>li,#menufix>ul>li{list-style: none;
 				float:left;
 				height: 65px;
 				width: 90px;
 			}
-	#menu>ul>li:hover{border-bottom: 2px solid gray;
+	#menu>ul>li:hover, #menufix>ul>li:hover{border-bottom: 2px solid gray;
 
 	}	
-	#menu>ul>li>p{height: 65px;
-					line-height: 65px;
+	#menu>ul>li>p,#menufix>ul>li>p{
+				height: 65px;
+				line-height: 65px;
+				margin:0;
 					}
-	#menu>ul>li:hover ul.submenu{display:block;
+	#menu>ul>li:hover ul.submenu,#menufix>ul>li:hover ul.submenu{display:block;
 	}		
-		ul.submenu{display:none;
+		ul.submenu{
+				display:none;
 				position: absolute;
 				background-color: white;
 				border:1px solid #b7b6b7;
 				list-style: none;
-				margin-top:0;
+				top:12;
+				width: 180px;
+				border-top:3px solid gray;
+				margin-left:0; 
 		}
 		ul.submenu>li{
 					padding: 5px;
-
+					padding-top:0;
 					margin: 0;
 		}
 
 
 #content{
 	width: 100%;
-	height: 1450px;
-	padding-bottom: 100px;
+
+	padding-bottom: 160px;
 }	
 #banner{
 	position: relative;
@@ -127,7 +137,21 @@ a{color:white;}
 	#logo{
 		padding-top:10px;
 	}
-	
+#dynampart{
+	text-align: center;
+}	
+#dynampart>span{
+	display:block;
+}
+#dynampart>div{
+	width:25%;
+	height: 180px;
+	display:block;
+	float:left;
+}
+#dynampart>div>img{height:180px;}
+#template{padding-top: 40px;
+box-sizing:border-box;}
 #template>div{
 	width: 100%;
 	height: 350px;}
@@ -144,6 +168,7 @@ a{color:white;}
 		display:block;
 		float:left;
 	}
+	#template>div>span{margin-top:10px; }
 	#template>div>div>img{padding-right:0;float:right;}
 	#template #btn{color:white;
 		background-color: #443d40;
@@ -155,13 +180,18 @@ a{color:white;}
 	 	#btn>span{height:60px ;
 	 		line-height:60px ;
 	 		font-size: 18px;
+	 		display:block;
+	 		padding: 0;
 	 	}	
 #portfolio{
 	text-align: center;
+
 }
-	#portfolio>div{
+#portfolio>span{display: block;}
+	#portfolio>div:nth-child(2){
 	text-align: center;
-	width: 600px;
+	display:inline-block;
+	
 }
 	#portfolio>div>ul{
 		margin:0;
@@ -195,6 +225,8 @@ a{color:white;}
 		width: 160px;
 		height: 60px;
 		text-align: center;
+		display: inline-block;
+
 		}
 		#portfolio  #btncoll>span{
 			height:60px ;
@@ -230,16 +262,30 @@ a{color:white;}
 	 		margin: 15px;
 	 	}
 	 	#contact{
+	 		position: relative;
 	 		color:white;
 	 		height: 400px;
 	 		width: 100%;
 	 		background-color: gray;
 	 		margin:0;
 	 	}
-	 	#contact::after{
+	 	#contact::after,#pict::after{
 	 		display:block;
 	 		content:"";
 	 		clear:both;
+	 	}
+	 	#pict>div>div
+	 	{float:left;
+	 		width: 130px;
+	 	}
+	 	#contactbg{
+	 		position:absolute;
+	 		display: block;
+	 		left:-2000px;
+	 		right: -2000px;
+	 		height: 400px;
+	 		background-color: gray;
+	 		z-index: -10;
 	 	}
 	 		#contact>div{
 	 			float:left;
@@ -248,7 +294,11 @@ a{color:white;}
 	 			text-align: center;
 	 			padding: 10px;
 	 		}
-	 		#contact>div>span{height:65px;}
+	 		#contact>div>span{
+	 			height:65px;
+	 			padding:10px;
+	 			display:block;
+	 			}
 	 		#contact>div>p{padding:5px 0;}
 	 		#contact button{
 	 			margin-top:10px;
@@ -267,17 +317,28 @@ a{color:white;}
 #footer{
 	display: block;
 	position: absolute;
-	height: 120px;
+	height: 160px;
 	bottom: 0;
 	color:white;
 	width: 100%;
 	text-align: center;
 }
+#footbg{
+	display: block;
+	background-color:#444444;
+	position: absolute;
+	left: -2000px;
+	right: -2000px;
+	height: 160px;
+	z-index:-100;
+}
 #footer #footline{
 position:relative;
 width: 100%;
-height: 120px;
+height: 160px;
 background-color:#444444;
+padding: 10px;
+box-sizing:border-box;
 }
 #footer #footeline>div{position:absolute;
 left:-2000px;
@@ -288,3 +349,15 @@ top: 0;
 z-index:-100;
 background-color: #444444;
 }
+#arrow{
+	width:40px;
+	height: 40px;
+	display: block;
+	border-radius: 20px;
+	background-color: white;
+	float: right;
+	padding:0;
+}
+#logofoot{float: left;
+display: block;
+width: 60px;}

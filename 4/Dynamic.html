@@ -59,15 +59,15 @@
 		</div>
 
 		<ul>
-			<li><p>Home</p></li>
+			<li><p><img src="img/home.png"width="13px">   Home</p></li>
 			<li><p>Joomla</p>
 				<ul class="submenu">
-					<li><p>Home</p></li>
-					<li><p>Joomla</p></li>
-					<li><p>Features</p></li>
-					<li><p>Blog</p></li>
-					<li><p>Forum</p></li>
-					<li><p>Login</p></li>
+					<li><p>Home  <p> welcome</p></p></li>
+					<li><p>Joomla <p> welcome</p></p></li>
+					<li><p>Features <p> welcome</p></p></li>
+					<li><p>Blog <p> welcome</p></p></li>
+					<li><p>Forum<p> welcome</p></p></li>
+					<li><p>Login<p> welcome</p></p></li>
 				</ul>
 			</li>
 			<li><p>Features</p>
@@ -107,6 +107,11 @@
 	<div id="contmenu">
 	</div>
 	<div id="dynampart">
+		<span>Our services</span>
+		<div><img  src="img/sample1.jpg"></div>
+		<div><img  src="img/sample2.jpg"></div>
+		<div><img  src="img/sample3.jpg"></div>
+		<div><img  src="img/sample1.jpg"></div>
 	</div>
 	<div  id="template">
 		<div>	
@@ -148,6 +153,9 @@
 	</div>
 		
 	<div id="contact">
+		<div id="contactbg">
+			
+		</div>
 	 	<div>
 	 		<span><img src="img/sq.png" width="30px">   Get in touch</span><br>
 	 		<img src="img/logo.png">
@@ -161,6 +169,24 @@
 	 	</div>
 	 	<div>
 	 		<span><img src="img/photo.png" width="30px">   Gallary</span>
+	 		<div id="pict">
+	 			<div>
+		 			<div ><img src="img/sample7.jpg" width="30px"> </div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 		</div>
+	 			<div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 			<div ><img src="img/sample7.jpg" width="30px"> </div>
+		 		</div>
+	 			<div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 			<div><img src="img/sample7.jpg" width="30px"> </div>
+		 		</div>
+	 			
+	 		</div>
 	 	</div>
 	 	<div>
 	 		<span><img src="img/list.png" width="30px">   Owr newsletter</span>
@@ -170,27 +196,42 @@
 	 		 <label><input type="text"placeholder=" Name"></label>
 	 		  <label><input type="text"placeholder=" E-mail"></label>
 	 		  <button><p>Subscribe</p></button>
-	 		   <p> Don't worry we never spam</p>
+	 		  <p> Don't worry we never spam</p>
 	 	</div>
 	</div>
 </div>
 <div  id="footer">
-	
+	<div id="footbg">
+	</div>
 	<div id="footline">
 		<div></div>
 		<p>This site is built with Love<img width="15px" src="img/love.png"></p>
 		<p>	Copyright © 2015 Tenth</p>
 		<p>	Powered by Warp Theme Framework </p>
+		<img id="logofoot"src="img/logo2.png">
+		<div id="arrow"></div>
 	</div>
+	
 </div>
 
 <script type="text/javascript">
-	var y;
-	$('body').on('scroll',scrollscrolling);
+	var y;var z=false;
+	$(window).on('scroll',scrolling);
 	function scrolling(){
-	 y=$('body').scrollTop();
-	 alert(y);
-	 if(y==40){ $('#menufix').css({display:"block"});}
+		 y=$(window).scrollTop();
+		 
+		if(y>40){
+		 	
+			if (!z) {
+				z=true;
+				$('#menufix').css({display:"block"});
+			}
+
+		}
+		else{
+			$('#menufix').css({display:"none"});
+		z=false;
+		}
 	}
 </script>
 </body>
