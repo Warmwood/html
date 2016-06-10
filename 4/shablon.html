@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="D:\DEVTOOLS\Bootstrap\3\css\bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="dynamic.css">
+<script type="text/javascript"src="file:\\d:\DEVTOOLS\jQuery\jquery.min.js">
+	
+</script>
+<title></title>
+<style type="text/css">
+	html{
+		height: 100%;
+	}
+	body{
+		
+		min-height: 100%;
+		width:1200px;
+		overflow:auto;
+		margin:0 auto;
+
+	}
+	#header{
+		background-color:#DFF0D8;
+		height: 130px;
+	}
+	#bannerimg{
+		left:0;
+		right: 0;
+		height: 200px;
+		position: absolute;
+		display: block;
+		top:130px;
+		background-image: url('img/kedr.jpg');
+		background-position:center;
+		background-size: cover;
+		background-repeat:no-repeat;
+		z-index: -1;
+	}
+
+	#banner{height: 200px;}
+	#content{
+		padding-bottom:120px;
+	}
+	#content::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#left{
+		width: 30%;
+		float: left;
+
+	}
+	#chuhnya{
+		width: 70%;
+		float: left;
+		overflow: auto;
+	}
+	#footer{
+		position: absolute;
+		background-color: #D9EDF7;
+		bottom: 0;
+		height: 120px;
+		width:100%;/*хочу по ширене штмл*/
+	}
+	#footercentr{
+		height: 120px;
+		width:1000px;
+		margin: 0 auto;
+		background-color: white;
+		border:1px solid #D9EDF7;
+	}
+
+</style>
+
+</head>
+<body>
+
+	<div id="header">Header</div>
+	<div id="banner">
+	</div>
+	<div id="bannerimg"></div>
+	<div id="content">
+			
+		<div id="left">
+				<ul>
+					<li>Greenland</li>
+					<li>New Guinea</li>
+					<li>Borneo</li>
+					<li>Madagascar</li>
+					<li>Baffin land</li>
+				</ul>
+		</div>
+		<div id="chuhnya">sfsf dsfsf dfsfs sddfs se sddfs sd sddf sd sdf sdfsdfd 	dsfsdfdsfds sdfs sdf sddf sdf
+		</div>
+		<div id="prefoot"></div>
+	</div>
+
+	<div id="footer">
+	 	<div id="footercentr">
+	 	</div>
+	</div>
+
+</body>
+</html>

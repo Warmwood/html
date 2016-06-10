@@ -193,6 +193,7 @@ box-sizing:border-box;}
 	text-align: center;
 	position: relative;
 
+
 }
 #portfolio>span{display: block;}
 	#portfolio>div:nth-child(2){
@@ -241,6 +242,10 @@ box-sizing:border-box;}
 	 		line-height:60px ;
 	 		font-size: 18px;
 	 	}
+	 	#collwrap{
+	 		position: relative;
+	 		height: 700px;
+	 	}
 	 	#portfolio>#collect{
 	 		position: absolute;
 	 		display: block;
@@ -258,18 +263,25 @@ box-sizing:border-box;}
 	 	#collect>div>div{
 	 		float: left;
 	 		display: block;
-	 		width: 350px!important;
-	 		height: 150px;
+	 		
+	 		
 	 		position: relative;
 
+
 	 	}
-	 	#collect img{	width: 350px;
+	 	#collect>div:nth-child(2){
+	 		padding-top:80px;
+	 	}
+	 	#collect img{	
+
+	 		width: 350px;
 	 		display: block;
+
 	 	}
 	 	div.cover{
 			position:absolute;
 			left:0;right: 0;top: 0; bottom: 0;
-			background-color: rgba(0,0,0,0.8);
+			background-color: rgba(0,0,0,0.9);
 			opacity:0.2;
 			z-index:100;
 			display:none;
@@ -294,12 +306,16 @@ box-sizing:border-box;}
 	 		right: -2000px;
 	 		background-image: url(img/tree.jpg);
 	 		z-index:-100;
-	 	}
-	 	#teambanner #face{
+		 	}
+	 	#face2,#face1{display:none;}
+	 	#teambanner>#face3{
 			z-index:1000;
-			
+			position: fixed;
+			display:block;
+			width: 300px;
+			height: 600px;
 	 	}
-	 	#face>img{
+	 	#face3>img{
 	 		margin: 15px;
 	 	}
 	 	#contact{
@@ -334,7 +350,7 @@ box-sizing:border-box;}
 	 	width: 100px;
 		box-sizing:border-box;
 		background-repeat:no-repeat; 
-	}
+		}
 	 	#contact>#contactbg{
 	 		position:absolute;
 	 		display: block;
