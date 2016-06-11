@@ -57,10 +57,17 @@
 		float: left;
 		overflow: auto;
 	}
+	#prefoot{
+		position:initial;
+		width: 1200px;
+		height: 10px;
+	}
 	#footer{
 		position: absolute;
 		background-color: #D9EDF7;
 		bottom: 0;
+		left:0;
+		right: 0;
 		height: 120px;
 		width:100%;/*хочу по ширене штмл*/
 	}
@@ -94,13 +101,27 @@
 		</div>
 		<div id="chuhnya">sfsf dsfsf dfsfs sddfs se sddfs sd sddf sd sdf sdfsdfd 	dsfsdfdsfds sdfs sdf sddf sdf
 		</div>
-		<div id="prefoot"></div>
-	</div>
+	</div>	
+	<div id="prefoot"></div>
+	
 
 	<div id="footer">
 	 	<div id="footercentr">
 	 	</div>
 	</div>
-
+<script type="text/javascript">
+	$(window).on('resize',addhight);
+	$(window).on('scroll',addhight);
+	function addhight(){
+		var hb=$('body').height();
+		var hh=$('html').height();
+		
+		if(hh<hb){
+			var h=hb-hh;
+		
+			$('#prefoot').css({hight:h+"px"});
+		}
+	}
+</script>
 </body>
 </html>
