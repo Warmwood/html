@@ -12,11 +12,19 @@
 		height: 100%;
 	}
 	body{
-		position: initial;
+		overflow: auto;
+		width: 100%;
+		max-width: initial;
 		min-height: 100%;
-		width:1200px;
-		overflow-x:hidden;
-		margin:0 auto;
+		position: relative;
+	}
+	.wrap{
+		overflow: hidden;
+		position: relative;
+		padding-bottom:50px;
+		margin: 0 auto;
+
+		width: 1200px;
 
 	}
 	#header{
@@ -30,15 +38,26 @@
 		position: absolute;
 		display: block;
 		top:130px;
-		    max-width: none;
 		background-image: url('img/kedr.jpg');
 		background-position:center;
 		background-size: cover;
 		background-repeat:no-repeat;
 		z-index: -1;
 	}
-
-	#banner{height: 200px;}
+	#bannerimg2{
+		left:0;
+		right: 0;
+		height: 200px;
+		position: absolute;
+		display: block;
+		bottom:120px;
+		background-image: url('img/kedr.jpg');
+		background-position:center;
+		background-size: cover;
+		background-repeat:no-repeat;
+		z-index: -1;
+	}
+	.banner{height: 200px;}
 	#content{
 		padding-bottom:120px;
 	}
@@ -61,6 +80,8 @@
 		position: absolute;
 		background-color: #D9EDF7;
 		bottom: 0;
+		left:0;
+		right: 0;
 		height: 120px;
 		width:100%;/*хочу по ширене штмл*/
 	}
@@ -76,11 +97,13 @@
 
 </head>
 <body>
-
+  <div class="wrap">
 	<div id="header">Header</div>
-	<div id="banner">
+  </div>
+	<div class="banner">
 	</div>
 	<div id="bannerimg"></div>
+	 <div class="wrap">
 	<div id="content">
 			
 		<div id="left">
@@ -94,13 +117,26 @@
 		</div>
 		<div id="chuhnya">sfsf dsfsf dfsfs sddfs se sddfs sd sddf sd sdf sdfsdfd 	dsfsdfdsfds sdfs sdf sddf sdf
 		</div>
-		<div id="prefoot"></div>
 	</div>
+	</div>	
+	<div class="banner">
+	</div>
+	<div id="bannerimg2"></div>
 
+
+		
+		<div class="wrap">
+			<span>sfsf dsfsf dfsfs sddfs se sddfs sd sddf sd sdf sdfsdfd 	dsfsdfdsfds sdfs sdf sddf sdf
+			</span>
+		</div>
+
+		<div id="prefoot"></div>
+	
+ 	
 	<div id="footer">
 	 	<div id="footercentr">
 	 	</div>
 	</div>
-
+</div>
 </body>
 </html>
