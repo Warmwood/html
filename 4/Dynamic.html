@@ -11,14 +11,17 @@
 <body>
 <div id="header">
 	<div id="grayline">
-	
-		<p>Monday,13</p>
-		<div>
-			<p>headlines:<a href="#">built your site using our technology</a></p>
-			<label><input type="text"placeholder= "search"></label>
+		<div class="wrap">
+			<p>Monday,13</p>
+			<div>
+				<p>headlines:<a href="#">built your site using our technology</a></p>
+				<label><input type="text"placeholder= " search ..."></label>
+			</div>
 		</div>
 	</div>
+	<div class="wrap">
 	<div id="menu">
+	
 		<div id="logo">
 			<img src="img/logo.png" alt="текст">
 
@@ -53,7 +56,8 @@
 			<li><p>Login</p></li>
 		</ul>
 	</div>
-	<div id="menufix">
+	</div>
+	<div id="menufix"><!--сопровождающее страницу меню-->
 		<div id="logo">
 			<img src="img/logo.png">
 
@@ -88,32 +92,33 @@
 			<li><p>Login</p></li>
 		</ul>
 	</div>
-	<div id="banner">
-		
+	<div id="banner">               <!--верхний шапко-баннер-->		
 		<div id="bannerbg">	
-		<div id="bannertext">
-		<span><b>RokBox Video</b></span>
-		<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
-		</div>
+			<div id="bannertext">
+			<span><b>RokBox Video</b></span>
+			<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
+			</div>
 		</div>
 		<div id="bannerbg2"class="hidden">	
-		<div id="bannertext2"class="hidden">
-		<span><b>RokBox Video</b></span>
-		<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
-		</div>
+			<div id="bannertext2"class="hidden">
+			<span><b>RokBox Video</b></span>
+			<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
+			</div>
 		</div>
 		<div id="bannerbg3"class="hidden">	
-		<div id="bannertext3"class="hidden">
-		<span><b>RokBox Video</b></span>
-		<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
-		</div>
+			<div id="bannertext3"class="hidden">
+			<span><b>RokBox Video</b></span>
+			<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
+			</div>
 		</div>
 
 	</div>
 	
 	
 </div>
+
 <div id="content">
+<div class="wrap">
 	<div id="contmenu">
 	</div>
 	<div id="dynampart">
@@ -137,6 +142,7 @@
 
 		</div>
 		<div id="btn"><span>Reed more  <b>></b>  </span></div>
+	</div>
 	</div>
 	<div id="portfolio">
 		
@@ -218,9 +224,7 @@
 	</div>
 		
 	<div id="contact">
-		<div id="contactbg">
-			
-		</div>
+		<div class="wrap">
 	 	<div>
 	 		<span><img src="img/sq.png" width="30px">   Get in touch</span><br>
 	 		<img src="img/logo.png">
@@ -264,10 +268,10 @@
 	 		  <p> Don't worry we never spam</p>
 	 	</div>
 	</div>
+	</div>
 </div>
 <div  id="footer">
-	<div id="footbg">
-	</div>
+	
 	<div id="footline">
 		<div></div>
 		<p>This site is built with Love<img width="15px" src="img/love.png"></p>
@@ -280,24 +284,7 @@
 </div>
 
 <script type="text/javascript">
-	var y;var z=false;
-	$(window).on('scroll',scrolling);
-	function scrolling(){
-		 y=$(window).scrollTop();
-		 
-		if(y>40){
-		 	
-			if (!z) {
-				z=true;
-				$('#menufix').css({display:"block"});
-			}
-
-		}
-		else{
-			$('#menufix').css({display:"none"});
-		z=false;
-		}
-	}
+	
 </script>
 </body>
 </html>

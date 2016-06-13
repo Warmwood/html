@@ -110,16 +110,25 @@
 	 	</div>
 	</div>
 <script type="text/javascript">
+var hb=$('body').height();
+var hh=$('html').height();
+var h= hh-hb;
+
+$('#prefoot').css({height:h+"px"});
 	$(window).on('resize',addhight);
 	$(window).on('scroll',addhight);
 	function addhight(){
-		var hb=$('body').height();
-		var hh=$('html').height();
-		
-		if(hh>hb){
-			var h=hh-hb;
+		 hb=$('body').height();
+		 hh=$('html').height();
+		var hhf=$('#prefoot').height();
+		if(hh>hb-hhf){
+
+			var h=hh-(hb-hhf);
 		
 			$('#prefoot').css({height:h+"px"});
+		}
+		else{
+			$('#prefoot').css({height:"0"});
 		}
 	}
 </script>

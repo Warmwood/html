@@ -4,10 +4,10 @@ body{
 	min-height: 100%;
 	position: relative;
 	margin:0 auto;
-	max-width: 1500px;
+	
 	overflow-x:hidden;
 	color:gray;
-
+	max-width: initial;
 }
 p{
 	font-size: 16px;
@@ -20,34 +20,42 @@ a{color:white;}
 .hidden{
 	display:none;
 }
+.wrap{	overflow: hidden;
+		position: relative;
+		
+		margin: 0 auto;
 
-#grayline{background-color: gray;
+		width: 1200px;}
+#grayline{
+	background-color: gray;
 	color:white;
 	width: 100%;
 	height: 45px;
 				}
 
-	#grayline::after,#grayline>div::after, #menu>ul::after,#dynampart::after,#menu::after{
+	#grayline>div::after,#grayline>div>div::after, #menu>ul::after,#dynampart::after,#menu::after{
 		clear:both;
 		content:"";
 		display:block;
 	}
-	#grayline>div{
+	#grayline>div>div{
 		width:60%;
-		float: right;}
-	#grayline>div>input{
-		width: 15%;
+		float: right;color: white;}
+	#grayline>div input{
+		width: 25%;
 		float: right; 
+
 		background-color: gray;
-		border:none;}
-	#grayline>div>p{width: 45%;
+		border:none;
+		padding-right: 0;}
+	#grayline>div>div>p{width: 45%;
 		float:left; }
-	#grayline>div>label, #grayline>div>p{
+	#grayline>div>div>label, #grayline>div>p{
 		
 		display: block;
 		
 		box-sizing:border-box;}
-	#grayline>p:first-child {
+	#grayline>div>p:first-child {
 		float:left;
 		display: block;
 		width: 40%;
@@ -125,16 +133,18 @@ a{color:white;}
 	height: 600px;
 	color:white;
 	text-align: center;
+	z-index:-1;
 }
 	
 	#banner	#bannerbg{
 			position:absolute;
 			display: block;
 			background-image: url(img/slide3.jpg);
-			left:-2000px;
-			right: -2000px;
+			background-repeat: no-repeat;
+			left:0;
+			right: 0;
 			height: 600px;
-			z-index:-1;
+			z-index:-10;
 
 		}
 	#bannertext>span{
@@ -156,8 +166,9 @@ a{color:white;}
 	float:left;
 }
 #dynampart>div>img{height:180px;}
-#template{padding-top: 40px;
-box-sizing:border-box;}
+#template{
+	padding-top: 40px;
+	box-sizing:border-box;}
 #template>div{
 	width: 100%;
 	height: 350px;}
@@ -220,6 +231,10 @@ box-sizing:border-box;}
 		float:left;
 		height: 46px;
 		list-style: none;
+		cursor:pointer;
+	}
+	#portfolio>div>ul>li:hover{
+		background-color: #f5f5dd;
 	}
 		#portfolio>div>ul>li>p{
 			height: 46px;
@@ -250,8 +265,8 @@ box-sizing:border-box;}
 	 		position: absolute;
 	 		display: block;
 	 		height: 700px;
-	 		left:-2000px;
-	 		right:-2000px;
+	 		left:0;
+	 		right:0;
 	 	}
 	 	#collect>div::after{
 			clear:both;
@@ -280,7 +295,7 @@ box-sizing:border-box;}
 	 	}
 	 	div.cover{
 			position:absolute;
-			left:0;right: 0;top: 0; bottom: 0;
+			left:0;right:0;top: 0; bottom: 0;
 			background-color: rgba(0,0,0,0.9);
 			opacity:0.2;
 			z-index:100;
@@ -300,11 +315,15 @@ box-sizing:border-box;}
 	 	}	
 	 	#teambanner>div{margin:0 auto;}
 	 	#teambanner #teambg{
-	 		top:0;bottom: 0;
+	 		top:0;
+	 		bottom: 0;
 	 		position: absolute;
-	 		left:-2000px;
-	 		right: -2000px;
+	 		left:0;
+	 		right:0;
 	 		background-image: url(img/tree.jpg);
+	 		background-position:center;
+			background-size: cover;
+			background-repeat:no-repeat;
 	 		z-index:-100;
 		 	}
 	 	#face2,#face1{display:none;}
@@ -317,11 +336,12 @@ box-sizing:border-box;}
 	 	}
 	 	#face3>img{
 	 		margin: 15px;
+
 	 	}
 	 	#contact{
 	 		position: relative;
 	 		color:white;
-	 		height: 400px;
+	 		height: 430px;
 	 		width: 100%;
 	 		background-color: gray;
 	 		margin:0;
@@ -351,39 +371,30 @@ box-sizing:border-box;}
 		box-sizing:border-box;
 		background-repeat:no-repeat; 
 		}
-	 	#contact>#contactbg{
-	 		position:absolute;
-	 		display: block;
-	 		
-	 		left:-1500px;
-	 		right: -1500px;
-	 		height: 400px;
-	 		background-color: #444448;
-	 		z-index: -1;
-	 	}
-	 		#contact>div{
+	 	
+	 		#contact>div>div{
 	 			float:left;
-	 			width: 500px;
+	 			width: 400px;
 	 			box-sizing:border-box;
 	 			text-align: center;
-	 			padding: 10px;
+	 			
 	 		}
-	 		#contact>div>span{
+	 		#contact>div>div>span{
 	 			height:65px;
 	 			padding:10px;
 	 			display:block;
 	 			}
-	 		#contact>div>p{padding:5px 0;}
+	 		#contact>div>div>p{padding:5px 0;}
 	 		#contact button{
 	 			margin-top:10px;
 	 			background-color: #f5f5f5;
 	 			color:gray;
 	 			border:0;
 	 			border-radius:15px;
-	 			height: 30px;
+	 			height: 35px;
 	 			
 	 		}
-	 		#contact button>p{padding:0 10px;height: 30px;
+	 		#contact button>p{padding:0 5px;height: 30px;
 	 			line-height: 30px;}
 	 		#contact input{height: 35px;margin:0 120px;
 	 		}
@@ -397,16 +408,7 @@ box-sizing:border-box;}
 	width: 100%;
 	text-align: center;
 }
-#footbg{
-	display: block;
-	background-color:black;
-	position: absolute;
-	left: -2000px;
-	right: -2000px;
-	height: 160px;
-	z-index:-100;
-	background-color:black;
-}
+
 #footer #footline{
 position:relative;
 width: 100%;
