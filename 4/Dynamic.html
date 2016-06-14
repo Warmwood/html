@@ -58,6 +58,7 @@
 	</div>
 	</div>
 	<div id="menufix"><!--сопровождающее страницу меню-->
+		<div class="wrap">
 		<div id="logo">
 			<img src="img/logo.png">
 
@@ -91,6 +92,7 @@
 			<li><p>Forum</p></li>
 			<li><p>Login</p></li>
 		</ul>
+		</div>
 	</div>
 	<div id="banner">               <!--верхний шапко-баннер-->		
 		<div id="bannerbg">	
@@ -137,7 +139,7 @@
 			<div>
 				<p>Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. </p>
 			</div>
-			<div><img src="img/pic1.png">
+			<div id="templpic">
 			</div>
 
 		</div>
@@ -158,47 +160,46 @@
 		<div id="collwrap">
 			<div id="collect">
 				<div >
-					<div>
+					<div style='background-image:url("img/sample1.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg">
+						
+					</div >
+					<div style='background-image:url("img/sample2.jpg")'>
+						<div class="cover"></div>
+						
 					</div>
-					<div>
+					<div style='background-image:url("img/sample3.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg">
+						
 					</div>
-					<div>
+					<div style='background-image:url("img/sample4.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg">
+						
 					</div>
-					<div>
+					<div style='background-image:url("img/sample5.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg"> 
-					</div>
-					<div>
-						<div class="cover"></div>
-						<img src="img/sample3.jpg"> 
+						
 					</div>
 				</div>
 				<div>
-					<div>
-						<div class="cover"></div>
-						<img src="img/sample3.jpg">
+					<div style='background-image:url("img/sample6.jpg")'>
+					<div class="cover"></div>		
 					</div>
-					<div>
+					<div style='background-image:url("img/sample7.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg">
+						
 					</div>
-					<div>
+					<div style='background-image:url("img/sample8.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg">
+						
 					</div>
-					<div>
+					<div style='background-image:url("img/sample9.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg"> 
+						
 					</div>
-					<div>
+					<div style='background-image:url("img/sample1.jpg")'>
 						<div class="cover"></div>
-						<img src="img/sample3.jpg"> 
+						
 					</div>
 				</div>
 			</div>
@@ -259,13 +260,13 @@
 	 	</div>
 	 	<div>
 	 		<span><img src="img/list.png" width="30px">   Owr newsletter</span>
-	 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-	 		 <p>Aenean commodo ligula eget dolor.</p>
-	 		 <p> Aenean massa. Cum sociis natoque </p>
+	 		<p>Lorem ipsum dolor sit amet, consectetuer .</p>
+	 		 <p>adipiscing elit. Aenean commodo ligula eget </p>
+	 		 <p> dolor.Aenean massa. Cum sociis natoque </p>
 	 		 <label><input type="text"placeholder=" Name"></label>
 	 		  <label><input type="text"placeholder=" E-mail"></label>
 	 		  <button><p>Subscribe</p></button>
-	 		  <p> Don't worry we never spam</p>
+	 		  <p> Don't worry we never spam!</p>
 	 	</div>
 	</div>
 	</div>
@@ -284,7 +285,24 @@
 </div>
 
 <script type="text/javascript">
-	
+	var y;var z=false;
+	$(window).on('scroll',scrolling);
+	function scrolling(){
+		 y=$(window).scrollTop();
+		 
+		if(y>40){
+		 	
+			if (!z) {
+				z=true;
+				$('#menufix').css({display:"block"});
+			}
+
+		}
+		else{
+			$('#menufix').css({display:"none"});
+		z=false;
+		}
+	}
 </script>
 </body>
 </html>
