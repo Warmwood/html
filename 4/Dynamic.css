@@ -210,7 +210,7 @@ a{color:white;}
 #portfolio{
 	text-align: center;
 	position: relative;
-margin-bottom:20px;
+	margin-bottom:20px;
 
 }
 #portfolio>span{display: block;}
@@ -250,6 +250,7 @@ margin-bottom:20px;
 			line-height: 40px;
 			padding:0 15px;
 			font-size: 18px;
+			margin: 0;
 		}
 		#portfolio #btncoll{color:white;
 		background-color: #443d40;
@@ -277,7 +278,12 @@ margin-bottom:20px;
 	 		left:0;
 	 		right:0;margin:20px 0;
 	 	}
-	 	#collect>div{padding:0;margin:0;}
+	 	#collect>div{
+	 		padding:0;
+	 		margin:0;
+	 		height: 210px;
+	 		overflow-y:hidden;
+	 	}
 	 	#collect>div::after{
 			clear:both;
 			content:"";
@@ -289,11 +295,13 @@ margin-bottom:20px;
 	 		padding:0;
 	 		float: left;
 	 		display: block;
-	 		height: 280px;
+	 		height: 210px;
 	 		width: 20%;
+	 		background-repeat: no-repeat;
+	 		background-image:100%; 
 	 		display: block;
 	 		position: relative;
-
+	 		overflow:hidden;
 
 	 	}
 	 	
@@ -304,11 +312,15 @@ margin-bottom:20px;
 			background-image:url('img/eye.jpg');
 			background-repeat: no-repeat;
 			background-position:center;
-			background-size: cover;
+			background-size: contain;
 			background-color: black;
 			opacity:0.5;
 			z-index:100;
 			display:none;
+		}
+		#collect>div>div:hover {
+			background-position:center;
+			background-size:300% ;
 		}
 		#collect>div>div:hover div.cover{
 
