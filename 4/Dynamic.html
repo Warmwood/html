@@ -157,8 +157,8 @@
 				<li><p>WOOMAN</p></li>
 			</ul>
 		</div>
-		<div id="collwrap">
-			<div id="collect">
+		<!--<div id="collwrap">-->
+		<div id="collect">
 				<div >
 					<div style='background-image:url("img/sample1.jpg")'>
 						<div class="cover"></div>
@@ -202,8 +202,8 @@
 						
 					</div>
 				</div>
-			</div>
 		</div>
+		<!--</div>-->
 		<div id="btncoll"><span>Show more item </span></div>
 	</div>
 	<div id="teambanner">
@@ -285,7 +285,7 @@
 </div>
 
 <script type="text/javascript">
-	var y;var z=false;
+	var y, hdiv1,hdiv2, z=false;
 	$(window).on('scroll',scrolling);
 	function scrolling(){
 		 y=$(window).scrollTop();
@@ -302,6 +302,11 @@
 			$('#menufix').css({display:"none"});
 		z=false;
 		}
+	}
+	$(window).on('resize',resizing);
+	function resizing(){
+
+
 	}
 </script>
 </body>
