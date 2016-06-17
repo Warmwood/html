@@ -280,7 +280,7 @@ a{color:white;}
 		 	#collect>div{
 		 		padding:0;
 		 		margin:0;
-		 	
+		 		
 		 	}
 		 	#collect>div::after{
 				clear:both;
@@ -289,7 +289,7 @@ a{color:white;}
 		
 		 	}
 		 	
-		 	#img-wrap>div{
+		 	 div.img{
 			 	position: absolute;
 				left: 0;
 				right: 0;
@@ -300,6 +300,14 @@ a{color:white;}
 				transition: all 250ms;
 
 		 	}
+		 	div.img:hover {
+				transform:scale(1.1);/*scale div 110%*/
+	   			
+			}
+			div.img:hover div.cover{
+				display:block;/*scale div 110%*/
+	   			
+			}
 		 	.img-wrap{
 		 		padding-bottom: 50%;
 				position: relative;
@@ -321,10 +329,7 @@ a{color:white;}
 				z-index:100;
 				display:none;
 			}
-			#img-wrap>div:hover {
-				transform:scale(1.1);/*scale div 110%*/
-	   			
-			}
+			
 			
 	 	#teambanner{
 	 		position: relative;
