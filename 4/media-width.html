@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>media width</title>
+	<style type="text/css">
+	html {
+		height: 100%;
+		background-color: #eee;
+	}
+	body {
+		width: 90%;
+		min-height: 100%;
+		margin: 0 auto;
+		background-color: #f9f9f9;
+	}
+	body > div {
+		float: left;
+		width: 10%;
+		transition: all 250ms;
+	}
+	div > div {
+		padding-bottom: 60%;
+		box-sizing: border-box;
+		border: 2px solid #aaa;
+	}
+	@media (max-width: 1200px) {
+		body > div {
+			width: 16.66%;
+		}
+	}
+	@media (max-width: 1024px) {
+		body > div {
+			width: 20%;
+		}
+	}
+	@media (max-width: 768px) {
+		body > div {
+			width: 33.3%;
+		}
+	}
+	</style>
+</head>
+<body>
+
+<div><div>1</div></div>
+<div><div>2</div></div>
+<div><div>3</div></div>
+<div><div>4</div></div>
+<div><div>5</div></div>
+<div><div>6</div></div>
+<div><div>7</div></div>
+<div><div>8</div></div>
+<div><div>9</div></div>
+<div><div>10</div></div>
+<div><div>11</div></div>
+<div><div>12</div></div>
+<div><div>13</div></div>
+<div><div>14</div></div>
+<div><div>15</div></div>
+<div><div>16</div></div>
+<div><div>17</div></div>
+<div><div>18</div></div>
+<div><div>19</div></div>
+<div><div>20</div></div>
+
+</body>
+</html>
