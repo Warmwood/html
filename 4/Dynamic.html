@@ -95,31 +95,31 @@
 		</div>
 	</div>
 	<div id="banner">               <!--верхний шапко-баннер-->		
-
-		<div id="bannerbg">	
+		
+		<div class="bannerbg">	
 			<div class="bannertext">
 			<span><b>RokBox Video</b></span>
 			<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
 			</div>
 		</div>
-		<div id="bannerbg2"class="hidden">	
+		<div class="bannerbg"class="hidden">	
 			<div class="bannertext"class="hidden">
 			<span><b>RokBox Video</b></span>
 			<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
 			</div>
 		</div>
-		<div id="bannerbg3"class="hidden">	
+		<div class="bannerbg"class="hidden">	
 			<div class="bannertext"class="hidden">
 			<span><b>RokBox Video</b></span>
 			<p>CHECK OUT THE VIDEO TO KNOW WHAT WE OFFER! Watch Video </p>
 			</div>
 		</div>
 
-			<div class="circle">
+		<div class="circle">
+				<div ></div>
 				<div></div>
 				<div></div>
-				<div></div>
-			</div>
+			</div>	
 		
 	</div>
 	
@@ -361,6 +361,24 @@
 
 
 	}
+	$('.circle:first-child').prop('ind','1');
+		$('.circle:nth-child(2)').prop('ind','3');	
+		$('.circle:last-child').prop('ind','2');
+	var masbaner=[];
+		masbaner[0]=$('#banner>div.bannerbg:first-child');
+		masbaner[1]=$('#banner>div.bannerbg:nth-child(2)');
+		masbaner[2]=$('#banner>div.bannerbg:last-child');
+		$('div.circle>div').on('click',baner);
+		function baner(e){
+		$('#banner>div.bannerbg').addClass('hidden');
+			j=$(this).prop('ind');
+			console.log(masbaner[0]);
+			masbaner[j].removeClass('hidden');
+				
+
+			
+		}
+
 </script>
 </body>
 </html>
