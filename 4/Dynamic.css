@@ -21,12 +21,14 @@ a{color:white;}
 .hidden{
 	display:none;
 }
+.free{display:block;}
 .wrap{	
 		position: relative;
 		
 		margin: 0 auto;
 
-		width: 1200px;}
+		width: 1200px;
+	}
 #grayline{
 	background-color: gray;
 	color:white;
@@ -165,8 +167,8 @@ a{color:white;}
 
 	.bannerbg{
 			position:absolute;
-			display: block;
-			background-image: url(img/slide3.jpg);
+			
+			display:none;
 			background-repeat: no-repeat;
 			left:0;
 			right: 0;
@@ -174,9 +176,10 @@ a{color:white;}
 			z-index:-10;
 
 		}
-		#banner>div.bannerbg:first-child{background-image: url(img/slide3.jpg);}
-		#banner>div.bannerbg:nth-child(2){background-image: url(img/slide1.jpg);}
-		#banner>div.bannerbg:last-child{background-image: url(img/tree.jpg);}
+		#banner>div.bannerbg:first-child.free{display:block!important; background-image: url(img/slide1.jpg);}
+		#banner>div.bannerbg:nth-child(2){ background-image: url(img/tree.jpg);}
+		#banner>div.bannerbg:nth-child(3){ background-image: url(img/slide4.jpg);}
+
 	.circle{
 		left:10px;
 		position:absolute;
@@ -191,6 +194,37 @@ a{color:white;}
 
 
 	}
+
+		.arrow2{
+			position: absolute;
+			width: 1200px;
+			transform:translate(-50%,-50%);
+			left:50%;
+		
+			top:80%;
+		}
+			.arrow2>div:first-child{
+				cursor:pointer;
+			    bottom: -20px; /* Положение треугольника */
+			    border: 15px solid transparent; /* Прозрачные границы */
+			    border-right: 15px solid gray; /* Добавляем треугольник */
+			   	width: 30px;height: 30px;
+			   	margin: 0;
+			   	
+				float: left;
+			}
+			.arrow2>div:nth-child(2){ 
+				cursor: pointer;
+				float:right;
+				margin: 0;
+			 	bottom: -20px; /* Положение треугольника */
+			    border: 15px solid transparent; /* Прозрачные границы */
+				border-left: 15px solid gray; /* Добавляем треугольник */
+				width: 30px;height: 30px;
+				
+				}
+				.arrow2>div:first-child:hover{border-right:15px solid rgba(222, 221, 221, 1);}
+				.arrow2>div:nth-child(2):hover{border-left:15px solid rgba(222, 221, 221, 1);}
 		.circle>div{
 			width:20px;
 			cursor:pointer;
@@ -198,7 +232,7 @@ a{color:white;}
 			height:20px;
 			border-radius:16px;
 			border:1px solid white;
-			background-color:rgba(221, 221, 221, 0.4) ;
+			
 		}
 		.circle>div:hover{
 			background-color:rgba(222, 221, 221, 1) ;
