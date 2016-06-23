@@ -342,7 +342,10 @@
 </div>
 
 <script type="text/javascript">
-	var y, hdiv1,hdiv2, z=false;
+	
+	var y,hdiv1,hdiv2,j,i,stop=false,
+	z=false,toggler=0;
+interval();
 	$(window).on('scroll',scrolling);
 	function scrolling(){
 		 y=$(window).scrollTop();
@@ -361,53 +364,59 @@
 		}
 	}
 	
-		$('div.circle>div:nth-child(3)').prop('ind','0');
+		$('div.circle>div:nth-child(1)').prop('ind','0');
 		$('.circle div:nth-child(2)').prop('ind','1');	
-		$('.circle div:nth-child(1)').prop('ind','2');
-		$('#banner>div.bannerbg:nth-child(1)').addClass('free').prop('ind','1');
-		$('#banner>div.bannerbg:nth-child(2)').prop('ind','2');
-		$('#banner>div.bannerbg:nth-child(3)').prop('ind','3');
-
+		$('.circle div:nth-child(3)').prop('ind','2');
+		$('#banner>div.bannerbg:nth-child(1)').prop('ind','0');
+		$('#banner>div.bannerbg:nth-child(2)').addClass('free').prop('ind','1');
+		$('#banner>div.bannerbg:nth-child(3)').prop('ind','2');
+		
 		var masbaner=[];
-		masbaner[0]=$('#banner>div.bannerbg:nth-child(3)');
+		masbaner[0]=$('#banner>div.bannerbg:nth-child(1)');
 		masbaner[1]=$('#banner>div.bannerbg:nth-child(2)');
-		masbaner[2]=$('#banner>div.bannerbg:nth-child(1)');
+		masbaner[2]=$('#banner>div.bannerbg:nth-child(3)');
 		$('div.circle>div').on('click',baner);
 		function baner(e){
-			//clearInterval(stop);stop=false;
-			var j=parseInt($(event.target).prop('ind'));
-			console.log(j);
+			
+			j=parseInt($(event.target).prop('ind'));
+			window.stop=true;
 		$('#banner>div.bannerbg').removeClass('free');
 			
 			masbaner[j].addClass('free');
 			
 		}
 		
-		//function interval(){
-		//	if(stop==false){
-		//	stop=setInterval(function() {banerrun()}, 1605);
-		//	}
-		//}
-//interval();
+		function interval(){
+	
+		if(window.stop==false){
+			window.stop=setInterval(function() {banerrun()}, 2305);
+			}
+			else{clearInterval(window.stop);window.stop=false;}
+		}
+
 $('.arrow2>div:nth-child(1)').on('click',function(){toggler=1;
-														banerrun;});
-$('.arrow2>div:nth-child(2)').on('click',banerrun);
+														banerrun();});
+$('.arrow2>div:nth-child(2)').on('click',function(){toggler=0;
+														banerrun();});
 
 function banerrun(e){
 
  i=parseInt($("#banner>div.bannerbg.free").prop('ind'));
 		console.log(i);
-		//clearInterval(stop);
+		clearInterval(stop);
 	$('#banner>div.bannerbg').removeClass('free');
-	if(toggler==1){ 
-		if (i==1){i=3}{$('#banner').children().eq(i-1).addClass('free');}
-
+	if(toggler==1){ console.log(toggler);
+		if (i==0){i=3;
+			$('#banner').children().eq(i-1).addClass('free');
+			console.log(i);
+		}
+		else{$('#banner').children().eq(i-1).addClass('free');}
 	}
 	else{
-		if(i==2){i=0;}
-		$('#banner').children().eq(i+1).addClass('free'); 
+		if(i==2){i=-1;$('#banner').children().eq(i+1).addClass('free');}
+		else{$('#banner').children().eq(i+1).addClass('free');} 
 	}
-//stop=false;toggler=0;
+stop=false;toggler=0;
 	
 }
 </script>
