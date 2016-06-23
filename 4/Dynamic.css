@@ -21,7 +21,7 @@ a{color:white;}
 .hidden{
 	display:none;
 }
-.free{display:block;}
+#banner>div.bannerbg.free{display:block!important;}
 .wrap{	
 		position: relative;
 		
@@ -176,7 +176,7 @@ a{color:white;}
 			z-index:-10;
 
 		}
-		#banner>div.bannerbg:first-child.free{display:block!important; background-image: url(img/slide1.jpg);}
+		#banner>div.bannerbg:first-child{ background-image: url(img/slide1.jpg);}
 		#banner>div.bannerbg:nth-child(2){ background-image: url(img/tree.jpg);}
 		#banner>div.bannerbg:nth-child(3){ background-image: url(img/slide4.jpg);}
 

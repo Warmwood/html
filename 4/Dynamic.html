@@ -368,19 +368,17 @@
 		$('#banner>div.bannerbg:nth-child(2)').prop('ind','2');
 		$('#banner>div.bannerbg:nth-child(3)').prop('ind','3');
 
-		var stop=false;var toggler=0,i,j;
-
 		var masbaner=[];
 		masbaner[0]=$('#banner>div.bannerbg:nth-child(3)');
 		masbaner[1]=$('#banner>div.bannerbg:nth-child(2)');
 		masbaner[2]=$('#banner>div.bannerbg:nth-child(1)');
 		$('div.circle>div').on('click',baner);
 		function baner(e){
-			
 			//clearInterval(stop);stop=false;
-		$('#banner>div.bannerbg').removeClass('free');
-			j=$(event.target).prop('ind');
+			var j=parseInt($(event.target).prop('ind'));
 			console.log(j);
+		$('#banner>div.bannerbg').removeClass('free');
+			
 			masbaner[j].addClass('free');
 			
 		}
